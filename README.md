@@ -6,6 +6,8 @@ This modularity enables `LLM` developers to develop a `chain` and an `agent` as 
 
 - [LangServe Template](#langserve-template)
   - [How this is created?](#how-this-is-created)
+  - [How to develop](#how-to-develop)
+  - [How to deploy](#how-to-deploy)
 
 
 ## How this is created?
@@ -39,5 +41,26 @@ poetry install
 To run the server
 
 ```sh
-langchain server
+langchain serve
+```
+
+## How to develop
+
+This repository is set as a template.
+You can always create a new repository based on this one easily.
+Or if you want to fork, feel free to do so.
+
+The template is created with `GitHub Codespaces`.
+We recommend you use `Codespaces`` to develop.
+
+## How to deploy
+
+To deploy, we create a `docker-compose.yml` that will build the `Dockerfile`.
+What you will need to provide is the `.env` file.
+
+```sh
+LANGCHAIN_TRACING_V2="false"
+LANGCHAIN_API_KEY="<YOUR-API-KEY>"  # Update to your API key
+LANGCHAIN_PROJECT="default"
+LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
 ```

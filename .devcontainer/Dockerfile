@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1
 ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 
 RUN pip install --upgrade pip
-RUN pip install poetry
+RUN pip install poetry==1.6.1
 RUN pip install langchain-cli
 
 # [Optional] Uncomment this section to install additional OS packages.
