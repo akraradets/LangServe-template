@@ -40,6 +40,7 @@ You can always create a new repository based on this one easily.
 Or if you want to fork, feel free to do so.
 
 After you spawn the `Dev Container` regardless of using `Codespaces` or `Local Dev Container`, it will install the extension and perform the `poetry install` right away.
+The result of `poetry install` will create the `.venv` folder with nesseary Python package to run the project.
 You can try to run 
 
 ```sh
@@ -71,3 +72,14 @@ LANGCHAIN_API_KEY="<YOUR-API-KEY>"  # Update to your API key
 LANGCHAIN_PROJECT="default"
 LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
 ```
+
+If you need more environment variables, you can add the `.env` file or create another one and append the list to `env_files` in `docker-compose.yml`
+
+To build and run Docker.
+
+```sh
+docker compose up -d --build
+```
+
+This will spawn a Docker container that only runs the project (similar to the Production).
+If this works fine, you should be safe to deploy.

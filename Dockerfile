@@ -49,4 +49,4 @@ EXPOSE 8080
 RUN apt clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-CMD exec uvicorn app.server:app --host 0.0.0.0 --port 8080
+CMD exec uvicorn app.server:app --host 0.0.0.0 --port 8000
