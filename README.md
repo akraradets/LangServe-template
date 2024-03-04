@@ -7,6 +7,8 @@ This modularity enables `LLM` developers to develop a `chain` and an `agent` as 
 - [LangServe Template](#langserve-template)
   - [How this is created?](#how-this-is-created)
   - [How to develop](#how-to-develop)
+    - [Codespaces](#codespaces)
+    - [Local Development](#local-development)
   - [How to deploy](#how-to-deploy)
 
 
@@ -19,20 +21,7 @@ langchain app new .
 ```
 
 The command will generate these files.
-
-```sh
-└── 📁app
-    └── __init__.py # Empty 
-    └── server.py   # Boilerplate `FastAPI`  
-└── 📁packages
-    └── README.md   # Empty
-└── .gitignore      # Only contain `__pycache__`
-└── Dockerfile      # This will defenetly change
-└── pyproject.toml  # A version control. Use `poetry install` to install the environment
-└── README.md       # This rename to `README_fromLangChain.md`
-```
-
-To install virtual environment, you run
+To install a virtual environment, you run
 
 ```sh
 poetry install
@@ -50,8 +39,26 @@ This repository is set as a template.
 You can always create a new repository based on this one easily.
 Or if you want to fork, feel free to do so.
 
+After you spawn the `Dev Container` regardless of using `Codespaces` or `Local Dev Container`, it will install the extension and perform the `poetry install` right away.
+You can try to run 
+
+```sh
+langchain serve
+``` 
+
+to see if it works.
+
+### Codespaces
+
 The template is created with `GitHub Codespaces`.
-We recommend you use `Codespaces`` to develop.
+We recommend you use `Codespaces` to develop.
+
+### Local Development
+
+We tested the `.devcontainer` on `Macbook Pro M3 pro` with `Docker Desktop` version 4.27.2. 
+It seems to work just like `Codespaces`.
+
+We have not yet tested this on `Windows` and `Linux/Ubuntu` but they should just work fine too.
 
 ## How to deploy
 

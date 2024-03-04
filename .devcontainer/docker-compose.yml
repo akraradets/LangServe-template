@@ -31,3 +31,5 @@ services:
 
 volumes:
   venv:
+  # needed by the devcontainer
+  vscode:
