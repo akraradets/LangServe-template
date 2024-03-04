@@ -5,6 +5,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    platform: linux/amd64
 
     volumes:
       # Forwards the local Docker socket to the container.
